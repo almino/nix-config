@@ -11,8 +11,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users =
     let
-      groups = [ "networkmanager" ];
-      password = "$y$j9T$v5pc.sLoYn26GUDibRrBA0$fdVBYV7sU0F3iwxUX9P80EIBAPmqAPq/tgzh5DEyZkD";
+      groups = [ "camera" "networkmanager" ];
       with-sudo = groups ++ [ "wheel" ];
     in
     {
@@ -22,7 +21,6 @@
         extraGroups = with-sudo;
         group = "users";
         home = "/home/dti";
-        initialHashedPassword = password;
         isSystemUser = lib.mkDefault true;
       };
       visitante = {

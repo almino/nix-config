@@ -4,7 +4,7 @@
   # !! NÃO altere as linhas ACIMA !!
 
   # https://nixos.wiki/wiki/Fonts#Installing_fonts_on_NixOS
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     caladea # A serif font metric-compatible with Microsoft Cambria
     carlito # A sans-serif font metric-compatible with Microsoft Calibri
     cascadia-code # https://github.com/microsoft/cascadia-code

@@ -76,6 +76,12 @@
     xautolock.time = lib.mkDefault 1;
     xkbVariant = "";
   };
+  
+  # https://nixos.org/manual/nixos/stable/options#opt-system.activationScripts
+  system.activationScripts = {
+    flatpak = "/run/current-system/sw/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
+    # git-main = "$DRY_RUN_CMD /run/current-system/sw/bin/git config --global init.defaultBranch main";
+  };
 
   # https://nixos.org/manual/nixos/stable/#sec-upgrading-automatic
   system.autoUpgrade.enable = lib.mkDefault true;

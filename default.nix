@@ -8,10 +8,8 @@
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
-    ./almino/hidden-user.nix
     ./este-pc
     ./apps.nix
-    ./gnome.nix
     ./network.nix
     ./sound.nix
     ./typography.nix
@@ -43,9 +41,6 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = lib.mkDefault true;
 
@@ -76,7 +71,7 @@
     xautolock.time = lib.mkDefault 1;
     xkbVariant = "";
   };
-  
+
   # https://nixos.org/manual/nixos/stable/options#opt-system.activationScripts
   system.activationScripts = {
     flatpak = "/run/current-system/sw/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";

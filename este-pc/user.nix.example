@@ -1,0 +1,15 @@
+{ ... }:
+
+{
+  imports = [ <home-manager/nixos> ];
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.name = {
+    isNormalUser = true;
+    description = "Full Name";
+    extraGroups = [ "networkmanager" ];
+  };
+
+  home-manager.users.name =
+    import ../home-manager.nix;
+}

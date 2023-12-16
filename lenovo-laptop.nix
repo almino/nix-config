@@ -5,9 +5,14 @@
 { ... }:
 
 {
+  home-manager.users.almino =
+    import ./almino/hm/me.lenovo-laptop.nix;
+
   imports = [
     ./almino
     ./cinnamon.nix
+    ./private/lenovo-laptop.nix
     ./touchpad.nix
+    <home-manager/nixos>
   ];
 }

@@ -11,7 +11,6 @@
   imports = [
     ./almino
     ./cinnamon.nix
-    ./private/lenovo-laptop.nix
     ./touchpad.nix
     <home-manager/nixos>
   ];

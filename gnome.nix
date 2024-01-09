@@ -29,4 +29,5 @@
     };
   };
 
+  xdg.portal.enable = true; #flatpak
 }

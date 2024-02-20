@@ -11,3 +11,5 @@
   `git config -f .gitmodules --remove-section submodule.remove`
 - Baixa todos os submódulos
   `git submodule update --init --recursive`
+- Atualiza todos os submódulos
+  `git pull --recurse-submodules`

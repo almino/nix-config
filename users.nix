@@ -13,14 +13,6 @@
       with-sudo = groups ++ [ "wheel" ];
     in
     {
-      dti = {
-        createHome = lib.mkDefault true;
-        description = "DTI";
-        extraGroups = with-sudo;
-        group = "users";
-        home = "/home/dti";
-        isSystemUser = lib.mkDefault true;
-      };
       visitante = {
         description = "Visitante";
         extraGroups = groups;

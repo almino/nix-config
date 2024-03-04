@@ -19,6 +19,12 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
+  # https://t.me/c/1859437962/31
+  # https://search.nixos.org/options?query=boot.loader.grub.configurationLimit
+  boot.loader.grub.configurationLimit = lib.mkDefault 8;
+  # https://search.nixos.org/options?query=boot.loader.systemd-boot.configurationLimit
+  boot.loader.systemd-boot.configurationLimit = lib.mkDefault 5;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

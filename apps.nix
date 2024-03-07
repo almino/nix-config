@@ -15,7 +15,6 @@
     telegram-desktop
     thunderbird
     vlc
-    wpsoffice
   ];
 
   # Allow unfree packages

@@ -4,9 +4,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (import /home/almino/Code/pje-office { inherit pkgs; })
     chromium
-    firefox
-    git
     google-chrome
     home-manager
     libreoffice
@@ -16,6 +15,8 @@
     thunderbird
     vlc
   ];
+
+  imports = [ ./apps ];
 
   # Allow unfree packages
   # nixpkgs.config.allowUnfree = true;
@@ -50,4 +51,18 @@
       google-chrome.commandLineArgs = chromiumArgs;
     };
 
+  programs.git = {
+    enable = true;
+    config = {
+      fetch.recurseSubmodules = "on-demand";
+      init.defaultBranch = "main";
+      push.recurseSubmodules = "on-demand";
+      rebase.autoStash = true;
+      submodule.recurse = true;
+      url."https://github.com/".insteadOf = [
+        "gh:"
+        "github:"
+      ];
+    };
+  };
 }

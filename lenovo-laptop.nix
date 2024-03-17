@@ -13,6 +13,7 @@
 
   imports = [
     ./almino
+    ./almino/apps/tmux.nix
     ./cinnamon.nix
     ./touchpad.nix
     <home-manager/nixos>

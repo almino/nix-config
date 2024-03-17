@@ -5,17 +5,11 @@
 { ... }:
 
 {
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.edileuza = {
-    isNormalUser = true;
-    description = "Edileuza";
-    extraGroups = [ "networkmanager" ];
+  home-manager.users = {
+    almino = import
+                ./almino/hm/me.lenovo-laptop.nix;
+    edileuza = import ./home-manager.nix;
   };
-
-  home-manager.users.almino =
-    import ./almino/hm/me.lenovo-laptop.nix;
-  home-manager.users.edileuza =
-    import ./home-manager.nix;
 
   imports = [
     ./almino
@@ -23,4 +17,12 @@
     ./touchpad.nix
     <home-manager/nixos>
   ];
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.edileuza = {
+    description = "Edileuza";
+    extraGroups = [ "networkmanager" ];
+    initialPassword = "123456";
+    isNormalUser = true;
+  };
 }

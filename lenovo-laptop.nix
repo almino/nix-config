@@ -15,6 +15,7 @@
     ./almino
     ./almino/apps/tmux.nix
     ./cinnamon.nix
+    ./private/apps/tailscale.nix
     ./touchpad.nix
     <home-manager/nixos>
   ];

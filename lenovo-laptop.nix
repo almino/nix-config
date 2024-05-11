@@ -2,9 +2,22 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ ... }:
+{ pkgs, ... }:
 
 {
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = [
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        droidcam-obs
+        # obs-backgroundremoval
+        obs-pipewire-audio-capture
+        wlrobs
+      ];
+    })
+  ];
+
   home-manager.users = {
     almino = import
                 ./almino/hm/me.lenovo-laptop.nix;

@@ -4,8 +4,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (import /home/almino/Code/pje-office { inherit pkgs; })
-    chromium
+    # (import /home/almino/Code/pje-office { inherit pkgs; })
     google-chrome
     home-manager
     libreoffice

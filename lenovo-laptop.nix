@@ -33,6 +33,8 @@
     <home-manager/nixos>
   ];
 
+  networking.hostName = "lenovo-s145"; # Define your hostname.
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.edileuza = {
     description = "Edileuza";

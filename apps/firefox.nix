@@ -3,6 +3,7 @@
 {
   programs.firefox = {
     enable = true;
+    languagePacks = [ "pt-BR" "en-US" ];
     policies = {
       DisablePocket = true;
       DisableSetDesktopBackground = true;

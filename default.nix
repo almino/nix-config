@@ -77,10 +77,12 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "br";
     # Idle time (in minutes) to wait until xautolock locks the computer.
     xautolock.time = lib.mkDefault 1;
-    xkbVariant = "";
+    xkb = {
+      layout = "br";
+      variant = "";
+    };
   };
 
   # https://nixos.org/manual/nixos/stable/options#opt-system.activationScripts

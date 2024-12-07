@@ -31,6 +31,7 @@
     ./private/apps/tailscale.nix
     ./touchpad.nix
     <home-manager/nixos>
+    <nixos-hardware/common/cpu/intel/sandy-bridge>
   ];
 
   networking.hostName = "lenovo-s145"; # Define your hostname.

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,7 @@
     ./sound.nix
     ./typography.nix
     ./users.nix
+    <home-manager/nixos>
   ];
 
   # Configure console keymap
@@ -29,8 +30,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Enable networking
-  networking.networkmanager.enable = lib.mkDefault true;
+  environment.systemPackages = with pkgs; [
+    nextcloud-client
+  ];
+
+  home-manager.backupFileExtension = "old";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
@@ -47,11 +51,31 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = lib.mkDefault true;
+  # Enable networking
+  networking.networkmanager.enable = lib.mkDefault true;
 
+  nix.extraOptions =
+    let
+      min = toString (1024 * 1024 * 1024); # 1 GiB
+      max = toString (1024 * 1024 * 1024); # 1 GiB
+    in
+    ''
+      min-free = ${min}
+      max-free = ${max}
+    '';
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  nix.optimise.automatic = true;
   # https://nixos.wiki/wiki/Storage_optimization
   nix.settings.auto-optimise-store = lib.mkDefault true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = lib.mkDefault true;
 
   nix.settings.experimental-features = [
     "nix-command"

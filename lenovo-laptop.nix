@@ -20,13 +20,13 @@
 
   home-manager.users = {
     almino = import
-                ./almino/hm/me.lenovo-laptop.nix;
+      ./almino/hm/me.lenovo-laptop.nix;
     edileuza = import ./home-manager.nix;
   };
 
   imports = [
     ./almino
-    ./almino/apps/tmux.nix
+    ./almino/apps/android-studio.nix
     ./cinnamon.nix
     ./private/apps/tailscale.nix
     ./touchpad.nix

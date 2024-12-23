@@ -8,10 +8,11 @@
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
-    ./este-pc
     ./apps.nix
+    ./este-pc
     ./network.nix
     ./sound.nix
+    ./stylix.nix
     ./typography.nix
     ./users.nix
     <home-manager/nixos>

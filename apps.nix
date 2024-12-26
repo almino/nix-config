@@ -5,13 +5,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # (import /home/almino/Code/pje-office { inherit pkgs; })
+    git
     google-chrome
     home-manager
-    libreoffice
     nanorc
     service-wrapper
     telegram-desktop
-    thunderbird
     vlc
   ];
 

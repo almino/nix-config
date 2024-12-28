@@ -28,8 +28,8 @@
         }
         {
           Name = "NixOS Wiki";
-          URLTemplate = "https://nixos.wiki/index.php?search={searchTerms}";
-          IconURL = "https://nixos.wiki/favicon.png";
+          URLTemplate = "https://wiki.nixos.org/index.php?search={searchTerms}";
+          IconURL = "https://wiki.nixos.org/favicon.png";
           definAliasedAliases = "nw";
         }
       ];

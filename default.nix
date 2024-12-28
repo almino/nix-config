@@ -12,7 +12,7 @@
     ./este-pc
     ./network.nix
     ./sound.nix
-    ./stylix.nix
+    # ./stylix.nix
     ./typography.nix
     ./users.nix
     <home-manager/nixos>

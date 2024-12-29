@@ -5,19 +5,6 @@
 { lib, pkgs, ... }:
 
 {
-  imports = [
-    # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
-    ./apps.nix
-    ./este-pc
-    ./network.nix
-    ./sound.nix
-    # ./stylix.nix
-    ./typography.nix
-    ./users.nix
-    <home-manager/nixos>
-  ];
-
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
@@ -33,6 +20,17 @@
 
   environment.systemPackages = with pkgs; [
     nextcloud-client
+  ];
+
+  imports = [
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+    ./apps.nix
+    ./este-pc
+    ./sound.nix
+    ./typography.nix
+    ./users.nix
+    <home-manager/nixos>
   ];
 
   home-manager.backupFileExtension = "old";

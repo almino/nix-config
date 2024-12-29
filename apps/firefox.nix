@@ -5,20 +5,45 @@
     enable = true;
     languagePacks = [ "pt-BR" "en-US" ];
     policies = {
+      AutofillAddressEnabled = true;
+      AutofillCreditCardEnabled = false;
+      Bookmarks = [{
+        Title = "Home Manager Configuration Options";
+        URL = "https://nix-community.github.io/home-manager/options.xhtml";
+      }];
+      DisableFirefoxAccounts = false;
+      DisableFirefoxScreenshots = false;
+      DisableFormHistory = false;
       DisablePocket = true;
       DisableSetDesktopBackground = true;
+      DontCheckDefaultBrowser = true;
+      ExtensionUpdate = true;
       FirefoxHome = {
-        SponsoredTopSites = false;
+        Highlights = true;
+        Locked = false;
         Pocket = false;
+        Search = true;
+        Snippets = true;
         SponsoredPocket = false;
+        SponsoredTopSites = false;
+        TopSites = true;
       };
-      FirefoxSuggest.SponsoredSuggestions = false;
+      FirefoxSuggest = {
+        ImproveSuggest = true;
+        Locked = false;
+        SponsoredSuggestions = false;
+      };
       Homepage.StartPage = "previous-session";
+      NetworkPrediction = true;
+      OfferToSaveLoginsDefault = false;
+      PasswordManagerEnabled = true;
       PasswordManagerExceptions = [
         "http://localhost"
       ];
+      PictureInPicture = true;
+      PrimaryPassword = true;
       PromptForDownloadLocation = true;
-      RequestedLocales = ["pt-BR" "pt" "en-US" "en"];
+      RequestedLocales = [ "pt-BR" "pt" "en-US" "en" ];
       SearchEngines.Add = [
         {
           Name = "Home Manager Options";
@@ -33,6 +58,9 @@
           definAliasedAliases = "nw";
         }
       ];
+      SearchSuggestEnabled = true;
     };
+    preferences = import ../options/firefox.nix;
+    preferencesStatus = "default";
   };
 }

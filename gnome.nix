@@ -7,12 +7,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     adw-gtk3 # https://github.com/lassekongo83/adw-gtk3
+    adwaita-icon-theme
     adwaita-qt
     dconf
     gnome-obfuscate
-    gnome.adwaita-icon-theme
-    gnome.gnome-software
-    gnome.gnome-tweaks
+    gnome-software
+    gnome-tweaks
     gnomeExtensions.expandable-notifications
   ];
 

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   # List packages installed in system profile. To search, run:
@@ -21,7 +21,7 @@
   home-manager.users = {
     almino = import
       ./almino/hm/me.lenovo-laptop.nix;
-    edileuza = import ./home-manager.nix;
+    edileuza = import ./hm/lenovo-laptop.hm.nix;
   };
 
   imports = [

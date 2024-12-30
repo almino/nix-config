@@ -61,7 +61,6 @@
     adwaita-qt
     bibata-cursors
     dconf
-    gettext # for gnomeExtensions.shutdowntimer
     gnome-obfuscate
     gnome-terminal
     gnome-tweaks
@@ -70,8 +69,6 @@
     gnomeExtensions.media-controls
     gnomeExtensions.nextcloud-folder
     gnomeExtensions.pano
-    gnomeExtensions.pop-shell
-    gnomeExtensions.shutdowntimer # https://extensions.gnome.org/extension/4372/shutdowntimer/
     gnomeExtensions.space-bar
     gnomeExtensions.tailscale-qs
     gnomeExtensions.vitals
@@ -81,7 +78,7 @@
     gnomeExtensions.wiggle
   ];
 
-  imports = [ ./default.nix ];
+  imports = [ ./default.nix ./almino/gnome.nix ];
 
   services.udev.packages = [ pkgs.gnome-settings-daemon ];
 

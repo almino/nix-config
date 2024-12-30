@@ -19,6 +19,9 @@
     pkgs.endeavour
   ];
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   hardware.graphics.enable = true;
   hardware.nvidia = {
     open = false;
@@ -46,6 +49,8 @@
   ];
 
   networking.hostName = "lenovo-15IRH8"; # Define your hostname.
+
+  services.blueman.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

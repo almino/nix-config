@@ -16,8 +16,10 @@
         wlrobs
       ];
     })
+    pkgs.endeavour
   ];
 
+  hardware.graphics.enable = true;
   hardware.nvidia = {
     open = false;
     prime = {
@@ -26,17 +28,16 @@
       offload.enable = true;
     };
   };
-  hardware.opengl.enable = true;
 
   home-manager.users = {
     almino = import
-      ./almino/hm/me.lenovo-laptop.nix;
+      ./almino/hm/me.gamer-laptop.nix;
     edileuza = import ./hm/lenovo-laptop.hm.nix;
   };
 
   imports = [
     ./almino
-    # ./almino/apps/android-studio.nix
+    ./almino/apps/android-studio.nix
     ./gnome.nix # includes default.nix
     ./private/apps/tailscale.nix
     ./touchpad.nix

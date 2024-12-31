@@ -33,7 +33,7 @@
     <home-manager/nixos>
   ];
 
-  home-manager.backupFileExtension = "old";
+  home-manager.backupFileExtension = builtins.toString builtins.currentTime;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";

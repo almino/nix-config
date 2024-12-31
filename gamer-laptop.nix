@@ -7,24 +7,24 @@
 {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = [
-    (pkgs.wrapOBS {
-      plugins = with pkgs.obs-studio-plugins; [
+  environment.systemPackages = with pkgs; [
+    (wrapOBS {
+      plugins = with obs-studio-plugins; [
         droidcam-obs
         # obs-backgroundremoval
         obs-pipewire-audio-capture
         wlrobs
       ];
     })
-    (pkgs.heroic.override {
+    (heroic.override {
       extraPkgs = pkgs: [
-        pkgs.gamemode
+        gamemode
       ];
     })
-    pkgs.lutris
-    pkgs.protonplus
-    pkgs.wineWowPackages.stable
-    pkgs.winetricks
+    lutris
+    protonplus
+    wineWowPackages.stable
+    winetricks
   ];
 
   # hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -59,6 +59,7 @@
     ./gnome.nix # includes default.nix
     ./private/apps/tailscale.nix
     ./touchpad.nix
+    ./qemu.nix
     <home-manager/nixos>
     # <nixos-hardware/common/cpu/intel/sandy-bridge>
   ];

@@ -16,12 +16,25 @@
         wlrobs
       ];
     })
+    (pkgs.heroic.override {
+      extraPkgs = pkgs: [
+        pkgs.gamemode
+      ];
+    })
+    pkgs.lutris
+    pkgs.protonplus
+    pkgs.wineWowPackages.stable
+    pkgs.winetricks
   ];
 
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  # hardware.bluetooth.enable = true; # enables support for Bluetooth
+  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   hardware.nvidia = {
     open = false;
     prime = {
@@ -30,6 +43,9 @@
       offload.enable = true;
     };
   };
+
+  hardware.xone.enable = true;
+  hardware.xpadneo.enable = true;
 
   home-manager.users = {
     almino = import
@@ -49,9 +65,21 @@
 
   networking.hostName = "lenovo-15IRH8"; # Define your hostname.
 
+  programs.gamemode.enable = true;
+  programs.steam.enable = true;
+
+  security.pam.loginLimits = [{
+    domain = "almino";
+    type = "hard";
+    item = "nofile";
+    value = "524288";
+  }];
+
   services.blueman.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  systemd.extraConfig = "DefaultLimitNOFILE=524288";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.edileuza = {

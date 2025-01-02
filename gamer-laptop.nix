@@ -25,7 +25,7 @@
     protonplus
     wineWowPackages.stable
     winetricks
-  ];
+  ] ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
 
   # hardware.bluetooth.enable = true; # enables support for Bluetooth
   # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -65,6 +65,15 @@
   ];
 
   networking.hostName = "lenovo-15IRH8"; # Define your hostname.
+
+  nix.settings = {
+    substituters = [
+      "https://cuda-maintainers.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
+    ];
+  };
 
   programs.gamemode.enable = true;
   programs.steam.enable = true;

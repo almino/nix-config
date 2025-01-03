@@ -96,6 +96,8 @@
   users.users = {
     almino.packages = with pkgs; [
       blender
+      pandoc
+      tts
     ];
     edileuza = {
       description = "Edileuza";

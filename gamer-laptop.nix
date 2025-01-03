@@ -16,6 +16,7 @@
         wlrobs
       ];
     })
+    # Games ======================================
     (heroic.override {
       extraPkgs = pkgs: [
         gamemode
@@ -26,9 +27,6 @@
     wineWowPackages.stable
     winetricks
   ] ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
-
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   hardware.graphics = {
     enable = true;
@@ -56,6 +54,7 @@
   imports = [
     ./almino
     ./almino/apps/android-studio.nix
+    ./almino/apps/docker.nix
     ./gnome.nix # includes default.nix
     ./private/apps/tailscale.nix
     ./qemu.nix
@@ -77,6 +76,7 @@
   };
 
   programs.gamemode.enable = true;
+  programs.nix-required-mounts.presets.nvidia-gpu.enable = true;
   programs.steam.enable = true;
 
   security.pam.loginLimits = [{
@@ -106,4 +106,6 @@
       isNormalUser = true;
     };
   };
+
+  virtualisation.docker.enableNvidia = true;
 }

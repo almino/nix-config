@@ -58,8 +58,9 @@
     ./almino/apps/android-studio.nix
     ./gnome.nix # includes default.nix
     ./private/apps/tailscale.nix
-    ./touchpad.nix
     ./qemu.nix
+    ./touchpad.nix
+    # ((import ./nix/sources.nix).package + "/pyproject.nix")
     <home-manager/nixos>
     # <nixos-hardware/common/cpu/intel/sandy-bridge>
   ];
@@ -92,10 +93,15 @@
   systemd.extraConfig = "DefaultLimitNOFILE=524288";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.edileuza = {
-    description = "Edileuza";
-    extraGroups = [ "networkmanager" ];
-    initialPassword = "123456";
-    isNormalUser = true;
+  users.users = {
+    almino.packages = with pkgs; [
+      blender
+    ];
+    edileuza = {
+      description = "Edileuza";
+      extraGroups = [ "networkmanager" ];
+      initialPassword = "123456";
+      isNormalUser = true;
+    };
   };
 }

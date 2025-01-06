@@ -1,7 +1,11 @@
 { ... }:
 
 {
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio = {
+    enable = false;
+    support32Bit = true;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

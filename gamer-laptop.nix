@@ -16,10 +16,12 @@
         wlrobs
       ];
     })
+    inkscape
     # Games ======================================
     (heroic.override {
       extraPkgs = pkgs: [
         gamemode
+        gamescope
       ];
     })
     lutris
@@ -41,6 +43,7 @@
       offload.enable = true;
     };
   };
+  hardware.nvidia-container-toolkit.enable = true;
 
   hardware.xone.enable = true;
   hardware.xpadneo.enable = true;
@@ -106,6 +109,4 @@
       isNormalUser = true;
     };
   };
-
-  virtualisation.docker.enableNvidia = true;
 }

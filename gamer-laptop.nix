@@ -109,4 +109,6 @@
       isNormalUser = true;
     };
   };
+
+  virtualisation.docker.enableNvidia = true;
 }

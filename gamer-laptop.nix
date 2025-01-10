@@ -5,6 +5,8 @@
 { pkgs, ... }:
 
 {
+  boot.kernelModules = [ "nvidia-uvm" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -16,7 +18,11 @@
         wlrobs
       ];
     })
+    (blender.override { cudaSupport = true; })
+    cudaPackages.cudatoolkit
+    cudaPackages.cudnn
     inkscape
+    nvidia-container-toolkit
     # Games ======================================
     (heroic.override {
       extraPkgs = pkgs: [
@@ -98,7 +104,6 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     almino.packages = with pkgs; [
-      blender
       pandoc
       tts
     ];
@@ -110,5 +115,5 @@
     };
   };
 
-  virtualisation.docker.enableNvidia = true;
+  # virtualisation.docker.enableNvidia = true; # deprecated
 }

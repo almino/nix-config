@@ -105,7 +105,6 @@
   users.users = {
     almino.packages = with pkgs; [
       pandoc
-      tts
     ];
     edileuza = {
       description = "Edileuza";

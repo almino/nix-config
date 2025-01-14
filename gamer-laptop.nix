@@ -64,9 +64,9 @@
     ./almino
     ./almino/apps/android-studio.nix
     ./almino/apps/docker.nix
+    ./almino/apps/virt-manager.nix
     ./gnome.nix # includes default.nix
     ./private/apps/tailscale.nix
-    ./qemu.nix
     ./touchpad.nix
     # ((import ./nix/sources.nix).package + "/pyproject.nix")
     <home-manager/nixos>
@@ -96,6 +96,8 @@
   }];
 
   services.blueman.enable = true;
+
+  services.fstrim.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

@@ -34,6 +34,16 @@
         SponsoredSuggestions = false;
       };
       Homepage.StartPage = "previous-session";
+      HttpAllowlist = [
+        "http://192.168.78.1" # mikortik
+        "http://192.168.78.2" # desktop servarr
+        "http://192.168.78.4" # wi-fi xiaomi
+        "http://desktop.lan" # desktop servarr
+        "http://desktop" # desktop servarr
+        "http://localhost"
+        "http://router.lan" # mikortik
+        "http://servar.lan" # desktop servarr
+      ];
       NetworkPrediction = true;
       OfferToSaveLoginsDefault = false;
       PasswordManagerEnabled = true;
@@ -54,7 +64,7 @@
         {
           Name = "NixOS Wiki";
           URLTemplate = "https://wiki.nixos.org/index.php?search={searchTerms}";
-          IconURL = "https://wiki.nixos.org/favicon.png";
+          IconURL = "https://wiki.nixos.org/favicon.ico";
           definAliasedAliases = "nw";
         }
       ];

@@ -57,7 +57,7 @@
   home-manager.users = {
     almino = import
       ./almino/hm/me.gamer-laptop.nix;
-    edileuza = import ./hm/lenovo-laptop.hm.nix;
+    # edileuza = import ./hm/lenovo-laptop.hm.nix;
   };
 
   imports = [
@@ -108,12 +108,6 @@
     almino.packages = with pkgs; [
       pandoc
     ];
-    edileuza = {
-      description = "Edileuza";
-      extraGroups = [ "networkmanager" ];
-      initialPassword = "123456";
-      isNormalUser = true;
-    };
   };
 
   # virtualisation.docker.enableNvidia = true; # deprecated

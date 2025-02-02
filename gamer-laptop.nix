@@ -31,6 +31,7 @@
       ];
     })
     lutris
+    prismlauncher
     protonplus
     wineWowPackages.stable
     winetricks

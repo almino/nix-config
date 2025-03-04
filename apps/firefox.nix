@@ -43,6 +43,7 @@
         "http://localhost"
         "http://router.lan" # mikortik
         "http://servarr.lan" # desktop servarr
+        "http://servarr" # desktop servarr
       ];
       NetworkPrediction = true;
       OfferToSaveLoginsDefault = false;

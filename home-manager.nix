@@ -4,6 +4,14 @@
   fonts.fontconfig.enable = true;
 
   home.activation = {
+    backedUpFiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      BASE_DIR = '.mozilla/firefox/personal';
+        for file in $(ls $BASE_DIR/*.hm.backup 2>/dev/null); do
+          baseName=$(basename "$file")
+          newName=$(echo "$baseName" | sed -E 's/([0-9]+)\.hm\.backup$/echo $((\1 - 1)).hm.backup/e')
+          mv "$file" $BASE_DIR/"$newName"
+        done
+    '';
     flatpak = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       $DRY_RUN_CMD /run/current-system/sw/bin/flatpak --user override --filesystem=/run/current-system/sw/share/X11/fonts
       $DRY_RUN_CMD /run/current-system/sw/bin/flatpak --user override --filesystem=$HOME/.icons

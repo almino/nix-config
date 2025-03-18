@@ -22,6 +22,9 @@
     nextcloud-client
   ];
 
+  home-manager.backupFileExtension =
+    (builtins.toString builtins.currentTime) + ".hm.backup";
+
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
@@ -32,8 +35,6 @@
     ./users.nix
     <home-manager/nixos>
   ];
-
-  home-manager.backupFileExtension = builtins.toString builtins.currentTime;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";

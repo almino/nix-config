@@ -67,6 +67,7 @@
     ./almino/apps/docker.nix
     ./almino/apps/virt-manager.nix
     ./gnome.nix # includes default.nix
+    ./private/apps/ollama.nix
     ./private/apps/tailscale.nix
     ./touchpad.nix
     # ((import ./nix/sources.nix).package + "/pyproject.nix")
@@ -96,7 +97,7 @@
     value = "524288";
   }];
 
-  services.blueman.enable = true;
+  # services.blueman.enable = true;
 
   services.fstrim.enable = true;
 

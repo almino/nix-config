@@ -64,7 +64,7 @@
     gnome-obfuscate
     gnome-terminal
     gnome-tweaks
-    gnomeExtensions.advanced-alttab-window-switcher
+    # gnomeExtensions.advanced-alttab-window-switcher
     gnomeExtensions.expandable-notifications
     gnomeExtensions.media-controls
     gnomeExtensions.nextcloud-folder

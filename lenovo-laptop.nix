@@ -26,7 +26,7 @@
 
   imports = [
     ./almino
-    ./almino/apps/android-studio.nix
+    # ./almino/apps/android-studio.nix
     ./cinnamon.nix # includes default.nix
     ./private/apps/tailscale.nix
     ./touchpad.nix

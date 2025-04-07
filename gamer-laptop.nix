@@ -18,7 +18,7 @@
         wlrobs
       ];
     })
-    # (blender.override { cudaSupport = true; })
+    (blender.override { cudaSupport = true; })
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
     inkscape
@@ -109,6 +109,4 @@
       pandoc
     ];
   };
-
-  # virtualisation.docker.enableNvidia = true; # deprecated
 }

@@ -21,6 +21,7 @@
     (blender.override { cudaSupport = true; })
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
+    gimp
     inkscape
     nvidia-container-toolkit
     # Games ======================================

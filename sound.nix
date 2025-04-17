@@ -1,14 +1,14 @@
-{ ... }:
+{ lib, ... }:
 
 {
   hardware.pulseaudio = {
-    enable = false;
+    enable = lib.mkDefault false;
     support32Bit = true;
   };
 
   security.rtkit.enable = true;
   services.pipewire = {
-    enable = true;
+    enable = lib.mkDefault true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   boot.kernelModules = [ "nvidia-uvm" ];
@@ -38,6 +38,12 @@
     winetricks
   ] ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
 
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+    };
+  };
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -54,6 +60,12 @@
   hardware.nvidia-container-toolkit.enable = true;
 
   hardware.xone.enable = true;
+
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
+
   hardware.xpadneo.enable = true;
 
   home-manager.users = {
@@ -99,6 +111,8 @@
   # services.blueman.enable = true;
 
   services.fstrim.enable = true;
+
+  services.pipewire.enable = lib.mkForce false;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

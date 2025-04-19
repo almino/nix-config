@@ -76,7 +76,18 @@
     gnomeExtensions.weather-oclock
     gnomeExtensions.wifi-qrcode
     gnomeExtensions.wiggle
+    gst_all_1.gst-libav
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-vaapi
+    gst_all_1.gstreamer
   ];
+
+  environment.variables = {
+    GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";
+  };
 
   imports = [ ./default.nix ./almino/gnome.nix ];
 

@@ -36,7 +36,7 @@
     protonplus
     wineWowPackages.stable
     winetricks
-  ] ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
+  ]; # ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
 
   hardware.bluetooth.settings = {
     General = {
@@ -123,5 +123,10 @@
     almino.packages = with pkgs; [
       pandoc
     ];
+  };
+
+  users.groups.servarr = {
+    gid = 689;
+    members = [ "almino" ];
   };
 }

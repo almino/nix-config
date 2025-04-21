@@ -10,14 +10,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (wrapOBS {
-      plugins = with obs-studio-plugins; [
-        droidcam-obs
-        # obs-backgroundremoval
-        obs-pipewire-audio-capture
-        wlrobs
-      ];
-    })
     (blender.override { cudaSupport = true; })
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
@@ -99,6 +91,25 @@
 
   programs.gamemode.enable = true;
   programs.nix-required-mounts.presets.nvidia-gpu.enable = true;
+
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      advanced-scene-switcher
+      droidcam-obs
+      obs-backgroundremoval
+      obs-composite-blur
+      obs-mute-filter
+      obs-nvfbc
+      obs-pipewire-audio-capture
+      obs-source-switcher
+      obs-text-pthread
+      obs-tuna
+      wlrobs
+    ];
+  };
+
   programs.steam.enable = true;
 
   security.pam.loginLimits = [{

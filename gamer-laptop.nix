@@ -38,11 +38,11 @@
     winetricks
   ]; # ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
 
-  hardware.bluetooth.settings = {
-    General = {
-      Enable = "Source,Sink,Media,Socket";
-    };
-  };
+  # hardware.bluetooth.settings = {
+  #   General = {
+  #     Enable = "Source,Sink,Media,Socket";
+  #   };
+  # };
 
   hardware.graphics = {
     enable = true;
@@ -62,7 +62,7 @@
   hardware.xone.enable = true;
 
   hardware.pulseaudio = {
-    enable = true;
+    enable = false;
     package = pkgs.pulseaudioFull;
   };
 
@@ -108,11 +108,11 @@
     value = "524288";
   }];
 
-  # services.blueman.enable = true;
+  services.blueman.enable = true;
 
   services.fstrim.enable = true;
 
-  services.pipewire.enable = lib.mkForce false;
+  services.pipewire.enable = lib.mkForce true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

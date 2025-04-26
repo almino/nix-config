@@ -129,13 +129,6 @@
 
   systemd.extraConfig = "DefaultLimitNOFILE=524288";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users = {
-    almino.packages = with pkgs; [
-      pandoc
-    ];
-  };
-
   users.groups.servarr = {
     gid = 689;
     members = [ "almino" ];

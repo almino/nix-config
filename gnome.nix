@@ -98,11 +98,11 @@
   services.xserver.displayManager.gdm = {
     enable = true;
     settings.greeter = {
-      Exclude = builtins.concatStringsSep "," [
+      exclude = builtins.concatStringsSep "," [
         "almino"
         "dti"
       ];
-      IncludeAll = lib.mkDefault false;
+      includeAll = lib.mkDefault false;
     };
   };
 

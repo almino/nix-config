@@ -1,7 +1,11 @@
 {
   "recommendations": [
     "b4dm4n.nixpkgs-fmt",
+    "christian-kohler.path-intellisense",
+    "eamodio.gitlens",
+    "foxundermoon.shell-format",
     "jnoortheen.nix-ide",
     "lafe.contextualduplicate",
+    "sleistner.vscode-fileutils",
   ]
 }

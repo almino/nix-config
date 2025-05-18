@@ -89,6 +89,10 @@
     ];
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-33.4.11" # heroic
+  ];
+
   programs.gamemode.enable = true;
   programs.nix-required-mounts.presets.nvidia-gpu.enable = true;
 

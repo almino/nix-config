@@ -1,6 +1,9 @@
 function FindProxyForURL(url, host) {
   let proxy_ufc = "PROXY proxy.ufc.br:8080";
 
+  if (dnsDomainIs(host, ".cambridge.org")) {
+    return proxy_ufc;
+  }
   if (dnsDomainIs(host, ".doi.org")) {
     return proxy_ufc;
   }

@@ -19,6 +19,9 @@ function FindProxyForURL(url, host) {
   if (dnsDomainIs(host, ".nejm.org")) {
     return proxy_ufc;
   }
+  if (dnsDomainIs(host, ".oup.com")) {
+    return proxy_ufc;
+  }
   if (
     dnsDomainIs(host, ".periodicos.capes.gov.br")
   ) {

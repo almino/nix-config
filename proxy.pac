@@ -13,6 +13,9 @@ function FindProxyForURL(url, host) {
   if (dnsDomainIs(host, ".elsevier.com")) {
     return proxy_ufc;
   }
+  if (dnsDomainIs(host, ".healthaffairs.org")) {
+    return proxy_ufc;
+  }
   if (dnsDomainIs(host, ".nature.com")) {
     return proxy_ufc;
   }

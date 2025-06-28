@@ -65,9 +65,9 @@
     gnome-terminal
     gnome-tweaks
     gnomeExtensions.advanced-alttab-window-switcher
-    gnomeExtensions.expandable-notifications
+    # gnomeExtensions.expandable-notifications
     gnomeExtensions.media-controls
-    gnomeExtensions.nextcloud-folder
+    # gnomeExtensions.nextcloud-folder
     gnomeExtensions.pano
     gnomeExtensions.space-bar
     gnomeExtensions.tailscale-qs

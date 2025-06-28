@@ -2,7 +2,7 @@
 
 {
   hardware.pulseaudio = {
-    enable = lib.mkDefault false;
+    enable = false;
     support32Bit = true;
   };
 

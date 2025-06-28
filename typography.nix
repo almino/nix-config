@@ -25,7 +25,8 @@
     hasklig
     liberation_ttf # Liberation Fonts, replacements for Times New Roman, Arial, and Courier New
     liberation-sans-narrow # Liberation Sans Narrow Font Family is a replacement for Arial Narrow
-    (nerdfonts.override { fonts = [ "FiraCode" "FiraMono" ]; })
+    nerd-fonts.fira-code
+    nerd-fonts.fira-mono
     noto-fonts
     noto-fonts-emoji
     proggyfonts

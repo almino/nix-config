@@ -65,10 +65,13 @@
     gnome-terminal
     gnome-tweaks
     gnomeExtensions.advanced-alttab-window-switcher
+    gnomeExtensions.autohide-battery
+    gnomeExtensions.clipqr
     # gnomeExtensions.expandable-notifications
     gnomeExtensions.media-controls
     # gnomeExtensions.nextcloud-folder
     gnomeExtensions.pano
+    gnomeExtensions.pip-on-top
     gnomeExtensions.space-bar
     gnomeExtensions.tailscale-qs
     gnomeExtensions.vitals

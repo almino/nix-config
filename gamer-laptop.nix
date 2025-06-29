@@ -105,7 +105,7 @@
       obs-backgroundremoval
       obs-composite-blur
       obs-mute-filter
-      obs-nvfbc
+      # obs-nvfbc # 25.05 broken
       obs-pipewire-audio-capture
       obs-source-switcher
       obs-text-pthread

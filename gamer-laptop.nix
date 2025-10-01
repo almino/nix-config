@@ -24,6 +24,7 @@
       ];
     })
     lutris
+    nmap
     prismlauncher
     protonplus
     wineWowPackages.stable
@@ -68,7 +69,7 @@
 
   imports = [
     ./almino
-    ./almino/apps/android-studio.nix
+    # ./almino/apps/android-studio.nix
     ./almino/apps/docker.nix
     ./almino/apps/virt-manager.nix
     ./gnome.nix # includes default.nix

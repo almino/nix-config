@@ -24,11 +24,13 @@
       ];
     })
     lutris
+    netcat
     nmap
     prismlauncher
     protonplus
     wineWowPackages.stable
     winetricks
+    zgrab2
   ]; # ++ [ pkgs.unstable.mcpelauncher-ui-qt ];
 
   # hardware.bluetooth.settings = {

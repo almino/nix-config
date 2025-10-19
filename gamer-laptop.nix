@@ -56,11 +56,6 @@
 
   hardware.xone.enable = true;
 
-  hardware.pulseaudio = {
-    enable = false;
-    package = pkgs.pulseaudioFull;
-  };
-
   hardware.xpadneo.enable = true;
 
   home-manager.users = {
@@ -131,6 +126,11 @@
   services.fstrim.enable = true;
 
   services.pipewire.enable = lib.mkForce true;
+
+  services.pulseaudio = {
+    enable = false;
+    package = pkgs.pulseaudioFull;
+  };
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

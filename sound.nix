@@ -1,12 +1,8 @@
 { lib, ... }:
 
 {
-  hardware.pulseaudio = {
-    enable = false;
-    support32Bit = true;
-  };
-
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = lib.mkDefault true;
     alsa.enable = true;
@@ -18,5 +14,10 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
+  };
+
+  services.pulseaudio = {
+    enable = false;
+    support32Bit = true;
   };
 }

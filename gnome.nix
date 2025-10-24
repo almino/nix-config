@@ -72,7 +72,7 @@
     # gnomeExtensions.nextcloud-folder
     gnomeExtensions.pano
     gnomeExtensions.pip-on-top
-    gnomeExtensions.space-bar
+    # gnomeExtensions.space-bar
     gnomeExtensions.tailscale-qs
     gnomeExtensions.vitals
     gnomeExtensions.vscode-search-provider

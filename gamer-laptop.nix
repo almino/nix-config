@@ -13,6 +13,7 @@
     (blender.override { cudaSupport = true; })
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
+    discord
     gimp
     inkscape
     nvidia-container-toolkit

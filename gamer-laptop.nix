@@ -90,6 +90,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-33.4.11" # heroic
+    "mbedtls-2.28.10" # discord
   ];
 
   programs.gamemode.enable = true;

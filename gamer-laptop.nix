@@ -29,7 +29,9 @@
     nmap
     prismlauncher
     protonplus
+    python3
     unzip
+    uv
     wineWowPackages.stable
     winetricks
     zgrab2

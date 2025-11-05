@@ -21,6 +21,7 @@
   environment.systemPackages = with pkgs; [
     nextcloud-client
     strawberry
+    syncthing
   ];
 
   home-manager.backupFileExtension =

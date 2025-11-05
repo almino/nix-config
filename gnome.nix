@@ -73,6 +73,8 @@
     gnomeExtensions.pano
     gnomeExtensions.pip-on-top
     # gnomeExtensions.space-bar
+    gnomeExtensions.syncthing-indicator
+    gnomeExtensions.syncthing-toggle
     gnomeExtensions.tailscale-qs
     gnomeExtensions.vitals
     gnomeExtensions.vscode-search-provider

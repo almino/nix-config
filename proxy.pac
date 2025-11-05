@@ -30,6 +30,9 @@ function FindProxyForURL(url, host) {
   ) {
     return proxy_ufc;
   }
+  if (dnsDomainIs(host, ".sagepub.com")) {
+    return proxy_ufc;
+  }
   if (dnsDomainIs(host, ".scielo.br")) {
     return proxy_ufc;
   }

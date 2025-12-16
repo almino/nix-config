@@ -7,5 +7,7 @@
     "jnoortheen.nix-ide",
     "lafe.contextualduplicate",
     "sleistner.vscode-fileutils",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode.remote-explorer",
   ]
 }

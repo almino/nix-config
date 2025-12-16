@@ -28,14 +28,14 @@
     nerd-fonts.fira-code
     nerd-fonts.fira-mono
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     proggyfonts
     roboto
     roboto-mono
     roboto-serif
     roboto-slab
-    ubuntu_font_family
-    vistafonts # Some TrueType fonts from Microsoft Windows Vista (Calibri, Cambria, Candara, Consolas, Constantia, Corbel)
+    ubuntu-classic
+    vista-fonts # Some TrueType fonts from Microsoft Windows Vista (Calibri, Cambria, Candara, Consolas, Constantia, Corbel)
   ];
 
   # !! NÃO altere as linhas ABAIXO !!

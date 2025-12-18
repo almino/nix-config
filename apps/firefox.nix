@@ -5,6 +5,7 @@
     enable = true;
     languagePacks = [ "pt-BR" "en-US" ];
     policies = {
+      /* https://mozilla.github.io/policy-templates/ */
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
       Bookmarks = [{
@@ -51,8 +52,9 @@
       PasswordManagerExceptions = [
         "http://localhost"
       ];
+      PDFjs = false;
       PictureInPicture = true;
-      PrimaryPassword = true;
+      # PrimaryPassword = true;
       PromptForDownloadLocation = true;
       RequestedLocales = [ "pt-BR" "pt" "en-US" "en" ];
       SearchEngines.Add = [

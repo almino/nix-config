@@ -78,6 +78,23 @@
     # <nixos-hardware/common/cpu/intel/sandy-bridge>
   ];
 
+
+  /* https://search.nixos.org/options?query=programs.starship.* */
+  programs.starship = {
+    enable = true;
+    presets = lib.mkForce [
+      "plain-text-symbols"
+      "no-runtime-versions"
+      # "tokyo-night"
+      # "gruvbox-rainbow"
+      "catppuccin-powerline"
+    ];
+    settings = {
+      # palette = "catppuccin";
+      line_break.disabled = false;
+    };
+  };
+
   networking.hostName = "lenovo-15IRH8"; # Define your hostname.
 
   nix.settings = {

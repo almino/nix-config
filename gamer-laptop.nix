@@ -108,6 +108,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-33.4.11" # heroic
+    "electron-36.9.5" # heroic
     "mbedtls-2.28.10" # discord
   ];
 
@@ -154,7 +155,7 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  systemd.extraConfig = "DefaultLimitNOFILE=524288";
+  # systemd.extraConfig = "DefaultLimitNOFILE=524288"; The option definition `systemd.extraConfig' no longer has any effect; please remove it.
 
   users.groups.servarr = {
     gid = 689;

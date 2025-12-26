@@ -43,14 +43,25 @@
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
+    LC_COLLATE = "pt_BR.UTF-8";
     LC_IDENTIFICATION = "pt_BR.UTF-8";
     LC_MEASUREMENT = "pt_BR.UTF-8";
+    LC_MESSAGES = "pt_BR.UTF-8";
     LC_MONETARY = "pt_BR.UTF-8";
     LC_NAME = "pt_BR.UTF-8";
     LC_NUMERIC = "pt_BR.UTF-8";
     LC_PAPER = "pt_BR.UTF-8";
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
+    LC_TYPE = "pt_BR.UTF-8";
+  };
+
+  i18n.inputMethod = {
+    enable = true;
+    fcitx5.addons = with pkgs; [
+     fcitx5-gtk
+   ];
+    type = "fcitx5";
   };
 
   # Enable networking

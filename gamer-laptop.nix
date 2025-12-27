@@ -70,6 +70,7 @@
     ./almino
     # ./almino/apps/android-studio.nix
     ./almino/apps/docker.nix
+    ./almino/apps/python.nix
     ./almino/apps/virt-manager.nix
     ./gnome.nix # includes default.nix
     ./touchpad.nix

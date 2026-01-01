@@ -5,6 +5,7 @@
   "browser.shell.checkDefaultBrowser" = false;
   "browser.translations.neverTranslateLanguages" = "pt";
   "distribution.searchplugins.defaultLocale" = "pt-BR";
+  "extensions.openPopupWithoutUserGesture.enabled" = true;
   # "font.minimum-size.x-western" = 14;
   "font.name.monospace.x-western" = "FiraMono Nerd Font";
   "font.name.sans-serif.x-western" = "Fira Sans";

@@ -22,6 +22,7 @@
     fira
     fira-code
     fira-code-symbols
+    fira-sans
     hasklig
     liberation_ttf # Liberation Fonts, replacements for Times New Roman, Arial, and Courier New
     liberation-sans-narrow # Liberation Sans Narrow Font Family is a replacement for Arial Narrow

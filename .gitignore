@@ -1,4 +1,6 @@
 .history/
 .Trash-1000
+**/.stfolder/*
+**/.stversions/*
+**/result/
 logs/
-result

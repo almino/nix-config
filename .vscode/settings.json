@@ -1,5 +1,9 @@
 {
   "files.exclude": {
-    "**/result": true
+    ".opencode/": true,
+    ".stfolder/": true,
+    ".stversions/": true,
+    "**/result": true,
+    "docs/": true
   }
 }

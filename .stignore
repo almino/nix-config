@@ -12,3 +12,7 @@
 **/.vite/
 **/dist/
 **/node_modules/
+**/*.xz
+**/*.tar.*
+private/secrets
+**/*.log

@@ -96,7 +96,7 @@
     };
   };
 
-  networking.hostName = "lenovo-15IRH8"; # Define your hostname.
+  networking.hostName = lib.mkForce "lenovo-15IRH8"; # Define your hostname.
 
   nix.settings = {
     substituters = [
